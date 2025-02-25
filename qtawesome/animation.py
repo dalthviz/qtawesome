@@ -37,12 +37,14 @@ class Spin:
             painter.translate(-x_center, -y_center)
 
     def start(self):
-        timer: QTimer = self.info[self.parent_widget][0]
-        timer.start(self.interval)
+        if self.parent_widget in self.info:
+            timer: QTimer = self.info[self.parent_widget][0]
+            timer.start(self.interval)
 
     def stop(self):
-        timer: QTimer = self.info[self.parent_widget][0]
-        timer.stop()
+        if self.parent_widget in self.info:
+            timer: QTimer = self.info[self.parent_widget][0]
+            timer.stop()
 
 
 class Pulse(Spin):

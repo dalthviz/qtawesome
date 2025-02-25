@@ -147,8 +147,8 @@ class AwesomeExample(QtWidgets.QDialog):
         spin_icon = qta.icon("fa5s.spinner", color="red", animation=animation1)
         spin_button.setIcon(spin_icon)
 
-        # timer1 = QtCore.QTimer()
-        # timer1.singleShot(3000, animation1.stop)
+        timer1 = QtCore.QTimer()
+        timer1.singleShot(3000, animation1.stop)
 
         # Pulse icons
         pulse_button = QtWidgets.QPushButton(" Pulsing icon")
