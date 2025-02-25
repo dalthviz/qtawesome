@@ -156,10 +156,10 @@ class AwesomeExample(QtWidgets.QDialog):
         pulse_icon = qta.icon("fa5s.spinner", color="green", animation=animation2)
         pulse_button.setIcon(pulse_icon)
 
-        # timer2 = QtCore.QTimer()
-        # timer2.singleShot(1500, animation2.start)
-        # timer3 = QtCore.QTimer()
-        # timer3.singleShot(6000, animation2.stop)
+        timer2 = QtCore.QTimer()
+        timer2.singleShot(1500, animation2.start)
+        timer3 = QtCore.QTimer()
+        timer3.singleShot(6000, animation2.stop)
 
         # Stacked spin icons
         stack_spin_button = QtWidgets.QPushButton("Stack spin")
