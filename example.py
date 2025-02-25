@@ -144,7 +144,6 @@ class AwesomeExample(QtWidgets.QDialog):
         # Spin icons
         spin_button = QtWidgets.QPushButton(" Spinning icon")
         animation1 = qta.Spin(spin_button)
-        animation1.stop()
         spin_icon = qta.icon("fa5s.spinner", color="red", animation=animation1)
         spin_button.setIcon(spin_icon)
 
