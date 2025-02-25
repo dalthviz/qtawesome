@@ -46,11 +46,12 @@ jobs:
         run: |
           conda info
           conda list
-      - name: Run tests
+      - name: Run example.py
         shell: bash -l {0}
         run: python example.py
-
-          pytest -x -vv --cov-report xml --cov=qtawesome qtawesome
+      - name: Run tests
+        shell: bash -l {0}
+        run: pytest -x -vv --cov-report xml --cov=qtawesome qtawesome
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
