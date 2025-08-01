@@ -23,7 +23,10 @@ jobs:
       fail-fast: false
       matrix:
         PYTHON_VERSION: ['3.7', '3.10']
-        QT_BINDING: ['pyqt5', 'pyside2']
+        QT_BINDING: ['pyqt5', 'pyside2', 'pyside6']
+        exclude:
+          - PYTHON_VERSION: '3.7'
+            QT_BINDING: 'pyside6'
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2

@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+dependencies:
+- pyside6
+- pytest
+- pytest-cov
+- pytest-qt
+- qtpy
