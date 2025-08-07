@@ -22,10 +22,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        PYTHON_VERSION: ['3.7', '3.10']
+        PYTHON_VERSION: ['3.7', '3.10', '3.13']
         QT_BINDING: ['pyqt5', 'pyside2', 'pyside6']
         exclude:
-          - PYTHON_VERSION: '3.7'
+          - PYTHON_VERSION: '3.7'  # PySide6 unavailable with Python 3.7
             QT_BINDING: 'pyside6'
     steps:
       - name: Checkout branch
