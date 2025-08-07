@@ -25,8 +25,10 @@ jobs:
         PYTHON_VERSION: ['3.7', '3.10', '3.13']
         QT_BINDING: ['pyqt5', 'pyside2', 'pyside6']
         exclude:
-          - PYTHON_VERSION: '3.7'  # PySide6 unavailable with Python 3.7
+          - PYTHON_VERSION: '3.7'  # PySide6 unavailable for Python 3.7
             QT_BINDING: 'pyside6'
+          - PYTHON_VERSION: '3.13'  # PySide2 unavailable for Python 3.13
+            QT_BINDING: 'pyside2'
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
