@@ -29,6 +29,8 @@ jobs:
             QT_BINDING: 'pyside6'
           - PYTHON_VERSION: '3.13'  # PySide2 unavailable for Python 3.13
             QT_BINDING: 'pyside2'
+          - PYTHON_VERSION: '3.13'  # PySide6 < 6.9 with Python 3.13
+            QT_BINDING: 'constrained_pyside6'
     steps:
       - name: Checkout branch
         uses: actions/checkout@v2
