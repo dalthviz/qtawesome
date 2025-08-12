@@ -24,12 +24,13 @@ jobs:
       matrix:
         PYTHON_VERSION: ['3.7', '3.10', '3.13']
         QT_BINDING: ['pyqt5', 'pyside2', 'pyside6']
-        QT_BINDING_VERSION: 'latest'
+        QT_BINDING_VERSION: ['latest']
         exclude:
           - PYTHON_VERSION: '3.7'  # PySide6 unavailable for Python 3.7
             QT_BINDING: 'pyside6'
           - PYTHON_VERSION: '3.13'  # PySide2 unavailable for Python 3.13
             QT_BINDING: 'pyside2'
+        include:
           - PYTHON_VERSION: '3.13'  # PySide6 but specific version (6.8.3) on Python 3.13
             QT_BINDING: 'pyside6'
             QT_BINDING_VERSION: '6.8.3'
