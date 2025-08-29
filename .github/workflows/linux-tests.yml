@@ -37,10 +37,11 @@ jobs:
         with:
            activate-environment: test
            auto-update-conda: false
-           auto-activate-base: false
+           auto-activate: false
            python-version: ${{ matrix.PYTHON_VERSION }}
            channels: conda-forge
            channel-priority: strict
+           conda-remove-defaults: true
       - name: Install dependencies
         shell: bash -l {0}
         run: conda env update --file requirements/environment_tests_${{ matrix.QT_BINDING }}_${{ matrix.QT_BINDING_VERSION }}.yml
@@ -100,10 +101,11 @@ jobs:
         with:
            activate-environment: test
            auto-update-conda: false
-           auto-activate-base: false
+           auto-activate: false
            python-version: ${{ matrix.PYTHON_VERSION }}
            channels: conda-forge
            channel-priority: strict
+           conda-remove-defaults: true
       - name: Install dependencies
         shell: bash -l {0}
         run: conda env update --file requirements/environment_tests_${{ matrix.QT_BINDING }}_${{ matrix.QT_BINDING_VERSION }}.yml
