@@ -39,7 +39,7 @@ jobs:
            auto-update-conda: false
            auto-activate-base: false
            python-version: ${{ matrix.PYTHON_VERSION }}
-           channels: defaults,conda-forge
+           channels: conda-forge,defaults
            channel-priority: strict
            conda-remove-defaults: true
       - name: Install dependencies
@@ -103,7 +103,7 @@ jobs:
            auto-update-conda: false
            auto-activate-base: false
            python-version: ${{ matrix.PYTHON_VERSION }}
-           channels: defaults,conda-forge
+           channels: conda-forge,defaults
            channel-priority: strict
            conda-remove-defaults: true
       - name: Install dependencies
