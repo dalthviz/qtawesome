@@ -12,7 +12,7 @@ jobs:
   macos-qt5:
     name: Mac Py${{ matrix.PYTHON_VERSION }} - ${{ matrix.QT_BINDING }} - ${{ matrix.QT_BINDING_VERSION }}
     timeout-minutes: 15
-    runs-on: macos-13
+    runs-on: macos-15-intel
     env:
       CI: True
       QT_API:  ${{ matrix.QT_BINDING }}
@@ -65,7 +65,7 @@ jobs:
   macos-qt6:
     name: Mac Py${{ matrix.PYTHON_VERSION }} - ${{ matrix.QT_BINDING }} - ${{ matrix.QT_BINDING_VERSION }}
     timeout-minutes: 15
-    runs-on: macos-13
+    runs-on: macos-15-intel
     env:
       CI: True
       QT_API:  ${{ matrix.QT_BINDING }}
