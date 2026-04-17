@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        PYTHON_VERSION: ['3.7', '3.10']
+        PYTHON_VERSION: ['3.9', '3.10']
         QT_BINDING: ['pyqt5', 'pyside2']
         include:
           - QT_BINDING_VERSION: 'latest'
